@@ -1,39 +1,11 @@
 public class vehicle {
-    private int speed;
-    private String colour;
-    private int no_wheel;
+    String v_name,v_no;
+    int v_wheels;
 
-    public vehicle(){
-
+    public vehicle (){
+        System.out.println("It's a vehicle ");
     }
-
-    public vehicle(int speed, String colour, int no_wheel) {
-        this.speed = speed;
-        this.colour = colour;
-        this.no_wheel = no_wheel;
-    }
-
-    public int getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
-
-    public String getColour() {
-        return colour;
-    }
-
-    public void setColour(String colour) {
-        this.colour = colour;
-    }
-
-    public int getNo_wheel() {
-        return no_wheel;
-    }
-
-    public void setNo_wheel(int no_wheel) {
-        this.no_wheel = no_wheel;
+    public void accelerate (double speed){
+        System.out.println("The speed of the vehicle is "+speed + "km/h");
     }
 }
