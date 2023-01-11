@@ -2,21 +2,57 @@ import java.util.*;
 public class Q5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int i , j , k , sum , average , product;
-        System.out.println("Enter the num");
-        i = sc.nextInt();
-        System.out.println("Enter the num");
-        j = sc.nextInt();
-        System.out.println("Enter the num");
-        k = sc.nextInt();
+        String grade ;
+        int assi =0;
+        int g_marks=0;
 
-        sum = i+j+k;
-        product = i*j*k;
-        average = sum /3;
+        System.out.println("Enter your grade ");
+        grade = sc.next();
 
-        System.out.println("The sum is "+sum);
-        System.out.println("The product is "+product);
-        System.out.println("The averagr is "+average);
+        System.out.println("Enter the number of assignment you have failed ");
+        assi = sc.nextInt();
+
+        switch (grade){
+            case "a":
+            case "A":
+                if (assi > 3){
+                    g_marks = 0;
+                    System.out.println("The grace marks you obtained is "+g_marks);
+                }
+                else{
+                    g_marks = 5;
+                    System.out.println("The grace marks you obtained is "+g_marks);
+                }
+                break;
+            case "b":
+            case "B":
+                if(assi > 2){
+                    g_marks =0;
+                    System.out.println("The grace marks you obtained is "+g_marks);
+
+                }
+                else{
+                    g_marks = 4;
+                    System.out.println("The grace marks you obtained is "+g_marks);
+                }
+                break;
+            case "c":
+            case "C":
+                if(assi > 1){
+                    g_marks=0;
+                    System.out.println("The grace marks you obtained is "+g_marks);
+                }
+                else {
+                    g_marks=5;
+                    System.out.println("The grace marks you obtained is "+g_marks);
+                }
+                break;
+
+            default:
+                System.out.println("Enter the correct option ");
+
+        }
+
 
     }
 }

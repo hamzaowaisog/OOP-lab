@@ -1,29 +1,37 @@
 import java.util.*;
-
 public class Q4 {
     public static void main(String[] args) {
-        double a , b, c ,ans1,ans2;
-        Scanner sc =  new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        int a = 0 ;
+        int i=0;
+        boolean flag = false;
 
-        System.out.println("Enter the value of a");
-         a = sc.nextDouble();
-        System.out.println("Enter the value of b");
-        b = sc.nextDouble();
-        System.out.println("Enter the value of c");
-        c = sc.nextDouble();
-        double v = Math.pow(b, 2) - (4 * a * c);
-        if(v >=0){
+        System.out.println("Enter the number to check whether it is prime number or not ");
 
-            ans1 = -b + (Math.sqrt(v) / (2 * a));
+        a = sc.nextInt();
 
-            ans2 = -b - (Math.sqrt(v) / (2 * a));
-
-            System.out.println("The root 1 is " + ans1);
-            System.out.println("The root 2 is " + ans2);
+        if (a == 0 || a == 1){
+            System.out.println("IT is not a prime number ");
+        }
+        else if (a == 2){
+            System.out.println("IT is a prime number ");
+        }
+        else{
+            for (i=2;i<=a/2;i++){
+                if(a%i == 0){
+                    flag = true;
+                    break;
+                }
+                else{
+                    flag = false;
+                }
+            }
+        }
+        if (flag == true){
+            System.out.println(a+" is not a prime number ");
         }
         else {
-            System.out.println("The roots are complex");
-
+            System.out.println(a+" is a prime number ");
         }
     }
 }

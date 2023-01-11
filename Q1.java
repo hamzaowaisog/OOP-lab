@@ -1,15 +1,34 @@
+import java.util.*;
 public class Q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double height =0;
+        double weight = 0;
+        double BMI =0;
 
-        public static void main(String[] args){
-            int speed = 75;
-            int distance = 3000;
+        System.out.println("Enter your height in meters ");
+        height  = sc.nextDouble();
+        System.out.println("Enter your weight in kg ");
+        weight = sc.nextDouble();
 
-            double time;
+        height = Math.pow(height,2);
 
-            time = distance/speed;
+        BMI = weight/height;
 
-            System.out.println("The time taken is "+time+" hours");
+        System.out.println("Your BMI is "+BMI);
 
+        if (BMI<18.5){
+            System.out.println("You are Underweight ");
         }
-    }
+        else if (BMI >= 18.5 && BMI <= 24.5){
+            System.out.println("You are Normal");
+        }
+        else if (BMI >= 25 && BMI <= 29.9){
+            System.out.println("You are Overweight ");
+        }
+        else {
+            System.out.println("You are Obese ");
+        }
 
+    }
+}
